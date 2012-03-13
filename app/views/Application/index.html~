@@ -2,9 +2,7 @@
 #{set title:'Latest test results' /}
 
 #{ifnot results}
-
-    #{ifnot runJob.equals("true")}
-    
+    #{ifnot runJob.equals("true")}    
     <p>
         No results
     </p>
@@ -23,3 +21,4 @@
         </a>
     </div>
 #{/list}
+#{a @run()}run executor job#{/a}
