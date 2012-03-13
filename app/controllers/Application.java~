@@ -14,7 +14,7 @@ public class Application extends Controller {
         
         String runJob = Play.configuration.getProperty("job.run-if-no-results");
         
-        if (results == null && runJob != null && runJob.equals("true"))
+        if (results != null && runJob != null && runJob.equals("true"))
             new jobs.Executor().now();
             
         render(results, runJob);
