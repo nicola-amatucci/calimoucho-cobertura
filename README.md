@@ -2,7 +2,7 @@
 
 A better version is at
 
-	[https://github.com/nicola-amatucci/calimoucho-cobertura-opensas](https://github.com/nicola-amatucci/calimoucho-cobertura-opensas)
+	https://github.com/nicola-amatucci/calimoucho-cobertura-opensas
 
 # Calimoucho-Cobertura
 
