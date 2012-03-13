@@ -5,19 +5,12 @@ import java.util.*;
 import play.mvc.*;
 
 import models.*;
-import play.Play;
 
 public class Application extends Controller {
 
     public static void index() {
         List<Result> results = Result.latests();
-        
-        String runJob = Play.configuration.getProperty("job.run-if-no-results");
-        
-        if (runJob != null && runJob.equals("true"))
-            new jobs.Executor().now();
-            
-        render(results, runJob);
+        render(results);
     }
     
     public static void show(String id) {

@@ -20,7 +20,7 @@
     #{/list} 
 </ul>
 
-#{if result.hasCoberturaFolder()}
+#{if result.hasCoberturaResult()}
 <p><a class="revLink" href="@{cobertura(result.uid)}" target="_blank">
 	Open Cobertura report in new Window
 </a><p>

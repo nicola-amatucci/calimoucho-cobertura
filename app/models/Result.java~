@@ -57,6 +57,10 @@ public class Result extends Model {
 
     public static List<Result> latests() {
         return find("order by timestamp").fetch(16);
+    }    public boolean hasCoberturaResult()
+    {
+        File f = Play.getFile("results/"+uid+"/code-coverage/");        
+        return f.exists();
     }
     
     public boolean hasCoberturaFolder()

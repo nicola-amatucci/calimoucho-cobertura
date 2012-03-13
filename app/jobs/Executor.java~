@@ -68,7 +68,7 @@ public class Executor extends Job {
         String mailEnabled = Play.configuration.getProperty("mail.enabled");
         
         if (mailEnabled != null && mailEnabled.equals("true"))
-            Notifier.sendResult(id, project.name, version, passed, project.notifications);
+            Notifier.sendResult(id, project.name, version, passed, project.notifications);        
     }
     
     // ~~~~

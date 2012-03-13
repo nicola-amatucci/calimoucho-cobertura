@@ -2,9 +2,18 @@
 #{set title:'Latest test results' /}
 
 #{ifnot results}
+
+    #{ifnot runJob.equals("true")}
+    
     <p>
         No results
     </p>
+    #{/ifnot}
+    #{else}
+        <p style="color:red;">
+            No results for now. Testing... hit <a style="color:red;" href="@{index}">refresh</a> on finish (see the console or wait some minutes)!
+        </p>
+    #{/else}
 #{/ifnot}
 
 #{list results, as:'result'}
